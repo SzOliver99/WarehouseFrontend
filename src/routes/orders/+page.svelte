@@ -22,10 +22,9 @@
 
 <div>
 	<h1>Orders</h1>
-
 	<table class="table">
-		<thead>
-			<tr class="table-dark">
+		<thead class="table-dark">
+			<tr>
 				<th scope="col">Order ID</th>
 				<th scope="col">Product</th>
 				<th scope="col">Quantity</th>
@@ -41,13 +40,11 @@
 					<td>{order.quantity}</td>
 					<td>
 						<div
-							class="px-2 py-1 rounded-3 text-white fw-bolder fs-6 text-center {order.status ===
-							'Shipped'
+							class="badge {order.status === 'Shipped'
 								? 'bg-success'
 								: order.status === 'Pending'
 									? 'bg-warning'
 									: 'bg-danger'}"
-							style="width: 5rem;"
 						>
 							{order.status}
 						</div>
